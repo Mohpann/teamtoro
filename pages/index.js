@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { Carousel } from 'react-bootstrap'
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 export default function Home() {
   return (
     <div className="container">
@@ -30,17 +30,19 @@ export default function Home() {
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-          <a href="/photos" className="card">
-            <h3>Carousel &rarr;</h3>
-            <p>Visit the carousel!</p>
+          <a href="Home" className="card">
+            <h3>Home &rarr;</h3>
+            <p>Visit the home page in progress!</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="Schedule" className="card">
+            <h3>Schedule &rarr;</h3>
+            <p>Current Schedule</p>
+          </a>
+
+          <a href="Contact" className="card">
+            <h3>Contact &rarr;</h3>
+            <p>Contact Us</p>
           </a>
 
           <a
