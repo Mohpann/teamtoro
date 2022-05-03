@@ -9,7 +9,7 @@ export default function Schedule() {
             <a>Back to home</a>
             </Link>
         </h2>
-        <p> I've typed schedule so many times it doesn't even look like a word anymore</p>
+        <p></p>
       </layout>
     </>
   )

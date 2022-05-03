@@ -1,218 +1,207 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { Carousel } from 'react-bootstrap'
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+import ReactDOM from 'react-dom'
+import { Router, Route, bRowserHistory, IndexRoute} from 'react-router'
+import 'bootstrap/dist/css/bootstrap.css';
+import React, { useState } from 'react';
+import Stack from 'react-bootstrap/Stack'
+import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav' 
+import Dropdown from 'react-bootstrap/Dropdown'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import Figure from 'react-bootstrap/Figure'
+import Card from 'react-bootstrap/Card'
+import CardGroup from 'react-bootstrap/CardGroup'
+import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+export default function Slide() {
+    return (
+        <div style= {{
+            backgroundImage: 'url("/images/BackgroundImage.jpg")',
+            backgroundSize: "130%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+        }}>
+        <Container style={{ paddingLeft: 0, paddingRight: 0, fontFamily: 'Dosis', fontStyle: 'normal', fontWeight: '1000', fontFamily: 'Montserrat'}}>
+            <Head>
+            <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
+            <title>Team Toro</title>
+            </Head>
+                <Container fluid>
+                    <Navbar bg="white" expand="xl" fixed = "top">
+                    <Container>
+                        <Navbar.Brand href="/">Team Toro Muay Thai</Navbar.Brand>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="/">Schedule</Nav.Link>
+                            <Nav.Link href="/">Contact</Nav.Link>
+                            <Nav.Link href="/">Gallery</Nav.Link>
+                            <Nav.Link href="/">Instructor</Nav.Link>
+                        </Nav>
+                        </Navbar.Collapse>
+                    </Container>
+                    </Navbar>
+                </Container>
 
-      <main>
+        <Stack>
+            <Carousel variant = "dark" style = {{paddingTop: "4.2%"}}>
+                <Carousel.Item>
+                    <Image
+                        fluid = "true"
+                        src="/images/pic1.jpg"
+                        height = {800}
+                        width={1920}
+                        alt="First slide"
+                    />
+                        <Carousel.Caption style = {{backgroundColor:"rgba(156,41,33,0.65)", color: "white"}}>
+                            <h3>Illinois Premier Muay Thai Gym</h3>
+                        </Carousel.Caption>
+                </Carousel.Item>
+                
+                <Carousel.Item>
+                <Image
+                    fluid = "true"
+                    src="/images/pic2.jpg"
+                    height = {800}
+                    width={1920}
+                    alt="Second slide"
+                />
 
-        <h1 className="title">
-          Read{' '}
-          <Link href="/post">
-            <a>this page!</a>
-          </Link>
-        </h1>
+                    <Carousel.Caption style = {{backgroundColor:"rgba(156,41,33,0.65)", color: "white"}}>
+                        <h3>Get in Great Shape and Reach Your Fitness Goals</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+                <Carousel.Item>
+                <Image 
+                    fluid = "true"
+                    src="/images/pic31.jpg"
+                    height = {800}
+                    width={1920}
+                    alt="Third slide"
+                />
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                    <Carousel.Caption style = {{backgroundColor:"rgba(156,41,33,0.65)", color: "white"}}>
+                        <h3>Learn Self Defense</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
 
-          <a href="Home" className="card">
-            <h3>Home &rarr;</h3>
-            <p>Visit the home page in progress!</p>
-          </a>
+                <Carousel.Item>
+                <Image
+                    fluid = "true"
+                    src="/images/pic4.jpg"
+                    height = {800}
+                    width={1920}
+                    alt="Fourth slide"
+                />
 
-          <a href="Schedule" className="card">
-            <h3>Schedule &rarr;</h3>
-            <p>Current Schedule</p>
-          </a>
+                    <Carousel.Caption style = {{backgroundColor:"rgba(156,41,33,0.65)", color: "white"}}>
+                        <h3>Train and Fight With a World-Class Team</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
 
-          <a href="Contact" className="card">
-            <h3>Contact &rarr;</h3>
-            <p>Contact Us</p>
-          </a>
+                <Carousel.Item>
+                <Image
+                    fluid = "true"
+                    src="/images/banner42.png"
+                    height = {800}
+                    width={1920}
+                    alt="Fifth slide"
+                />
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                    <Carousel.Caption style = {{backgroundColor:"rgba(156,41,33,0.65)", color: "white"}}>
+                        <h3>Kids Classes Offered</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+            
+            <div>
+                <Row>
+                    <CardGroup>
+                        <Card>
+                            <Card.Img variant="top" src="/images/muaythai1.png" height = {300} width={100}/>
+                            <Card.Body>
+                                <Card.Title>Competition</Card.Title>
+                                <Card.Text>
+                                Are you looking to test yourself in competition? Train with world class professional and amateur fighters at Team Toro.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card>
+                            <Card.Img variant="top" src="/images/muaythai2.png" height = {300} width={300}/>
+                            <Card.Body>
+                                <Card.Title>Strength</Card.Title>
+                                <Card.Text>
+                                Build your strength and confidence through the art of Muay Thai.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card>
+                            <Card.Img variant="top" src="/images/muaythai3.png" height = {300} width={300}/>
+                            <Card.Body>
+                                <Card.Title>Conditioning</Card.Title>
+                                <Card.Text>
+                                Let us help you meet your fitness goals, whether it is weight-loss or overall wellness improvement we can help you out!
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </CardGroup>
+                </Row>
+            </div>
+
+            <div style={{backgroundColor: "white"}}>
+            <Row>
+                <Col className="text-center">
+                    <h2 style = {{
+                        paddingTop: "2%",
+                        paddingBottom: "2%"
+                    }}>Welcome To Team Toro Janjira Muay Thai</h2>
+                    <Image
+                        src="/images/DescriptionImg.jpg"
+                        alt="DescriptionImage"
+                    />
+                    <p style = {{
+                        paddingLeft: "10%", 
+                        paddingRight: "10%",
+                        paddingTop: "2%"
+                    }}>
+                    We are the midwest's premiere Muay Thai gym. We offer authentic traditional Muay Thai in a fun and safe environment! 
+                    Whether you are looking to get into shape, learn self-defense, or compete Team Toro is the place for you!  
+                    Come and check out a class today! We're not just a gym we are a family!!!
+                    </p>
+                </Col>
+            </Row>
+            </div>
+
+            <div className ="footer" style = {{backgroundColor:"rgb(156,41,33)", paddingTop: 5}}>
+                <Container>
+                    <Row style = {{color: "white"}}>
+                        <Col>
+                            <h4>Testimonial</h4>
+                            <p></p>
+                        </Col>
+                        <Col>
+                            <h4>Today's Classes</h4>
+                            <p>5:00 pm - Kids Class <br></br>6:00 pm - Beginners Muay Thai <br></br>7:00 pm - Advanced Muay Thai</p>
+                        </Col>
+                        <Col>
+                            <h4>Contact</h4> 
+                            <p>Team Toro Muay Thai <br></br>1041 Vandustrial Dr, Westmont, IL 60559<br></br> (630) 640-2686</p>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+
+        </Stack>
+        </Container>
         </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
-}
+        
+    )
+  }
