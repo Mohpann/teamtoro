@@ -1,9 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
-export NODE_ENV=production
+nohup npm run dev &>> //var/mail/ec2-user
 
-while [ 1 ]
-do
-	node app_cpf.js &>> bitcoin.log
-done
 
