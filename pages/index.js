@@ -41,7 +41,7 @@ export default function Slide() {
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="/">Schedule</Nav.Link>
-                            <Nav.Link href="/">Contact</Nav.Link>
+                            <Nav.Link href="/Contact">Contact</Nav.Link>
                             <Nav.Link href="/">Gallery</Nav.Link>
                             <Nav.Link href="/">Instructor</Nav.Link>
                         </Nav>

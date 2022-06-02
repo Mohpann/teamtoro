@@ -1,0 +1,28 @@
+.my-container {
+    padding-left: 0;
+    padding-right: 0; 
+    font-family: 'Dosis';
+    font-style: 'normal'; 
+    font-weight: '1000'; 
+    font-family: 'Montserrat'
+}
+
+.my-div {
+    background-image: url("/images/BackgroundImage.jpg");
+    background-size: 130%;
+    background-position: center;
+    background-repeat: no-repeat
+}
+.parallax {
+  /* The image used */
+  background-image: url("/images/BackgroundImage.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
