@@ -54,20 +54,28 @@ export default function Gallery() {
                 </Container>
             </div>
 
-            <div></div>
-
-            <div style = {{width:"1400", height:"600", backgroundColor:"gray"}}>
-            <p>this is some text</p>
+            <div style={{paddingTop: 50}}>
+                <Row>
+                        <Card className="text-center">
+                            <Card.Body>
+                                <Card.Title>Contact</Card.Title>
+                                <Card.Text>
+                                We appreciate your interest in our school and classes. Feel free to contact us today and we will respond as soon as possible.  
+                                </Card.Text>
+                                <Button variant="primary">Contact Us</Button>
+                            </Card.Body>
+                        </Card>
+                </Row>
             </div>
             
             <div>
                 <iframe
-                    width="1400"
-                    height="600"
-                    loading="lazy"
-                    allowFullScreen
-                    referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA9CTJInJiOWjGr6t6gMgCNCMcNekwSvhY&q=Space+Needle,Seattle+WA">
+                width="1320"
+                height="600"
+                loading="lazy"
+                allowFullScreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA9CTJInJiOWjGr6t6gMgCNCMcNekwSvhY&q=Space+Needle,Seattle+WA">
                 </iframe>
             </div>
 
