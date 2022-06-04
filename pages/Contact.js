@@ -78,7 +78,25 @@ export default function Gallery() {
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA9CTJInJiOWjGr6t6gMgCNCMcNekwSvhY&q=Space+Needle,Seattle+WA">
                 </iframe>
             </div>
-
+            
+            <div className ="footer" style = {{backgroundColor:"rgb(156,41,33)", paddingTop: 5}}>
+            <Container>
+                <Row style = {{color: "white"}}>
+                    <Col>
+                        <h4>Testimonial</h4>
+                        <p></p>
+                    </Col>
+                    <Col>
+                        <h4>Today's Classes</h4>
+                        <p>5:00 pm - Kids Class <br></br>6:00 pm - Beginners Muay Thai <br></br>7:00 pm - Advanced Muay Thai</p>
+                    </Col>
+                    <Col>
+                        <h4>Contact</h4> 
+                        <p>Team Toro Muay Thai <br></br>1041 Vandustrial Dr, Westmont, IL 60559<br></br> (630) 640-2686</p>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
             </body>
         </Container>
       </div>
