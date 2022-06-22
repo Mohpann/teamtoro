@@ -1,0 +1,6 @@
+.body {
+    background-image: 'url("/images/BackgroundImage.jpg")';
+    background-size: "130%";
+    background-position: "center";
+    background-repeat: "no-repeat"
+}
